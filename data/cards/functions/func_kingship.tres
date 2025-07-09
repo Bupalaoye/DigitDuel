@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://21c64ptcc80l"]
+
+[ext_resource type="Texture2D" uid="uid://bs11w7a4762b8" path="res://assets/PlayingCards/individual_sprites/jack_of_clubs.png" id="1_3xqqa"]
+[ext_resource type="Script" uid="uid://d1q2pfofy8b30" path="res://data/definitions/CardData.gd" id="1_48iky"]
+
+[resource]
+script = ExtResource("1_48iky")
+type = 1
+common_id = "func_kingship"
+common_name = "kingship"
+common_description = "选择你领地上的一张数字牌，其点数 翻倍"
+common_artwork = ExtResource("1_3xqqa")
+effect = 0
+metadata/_custom_type_script = "uid://d1q2pfofy8b30"

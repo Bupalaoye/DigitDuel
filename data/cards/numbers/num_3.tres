@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://cfpvmjut2vt13"]
+
+[ext_resource type="Texture2D" uid="uid://bpmambhud6b5k" path="res://assets/PlayingCards/individual_sprites/3_of_clubs.png" id="1_uywg2"]
+[ext_resource type="Script" uid="uid://d1q2pfofy8b30" path="res://data/definitions/CardData.gd" id="2_3i7mx"]
+
+[resource]
+script = ExtResource("2_3i7mx")
+type = 0
+common_id = "num_3"
+common_name = "3"
+common_description = ""
+common_artwork = ExtResource("1_uywg2")
+base_value = 3
+metadata/_custom_type_script = "uid://d1q2pfofy8b30"

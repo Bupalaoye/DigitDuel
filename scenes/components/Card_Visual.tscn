@@ -1,0 +1,106 @@
+[gd_scene load_steps=4 format=3 uid="uid://du3x8q6bpjunk"]
+
+[ext_resource type="Script" uid="uid://bjdu8j3qsk88a" path="res://scripts/components/Card_Visual.gd" id="1_ioh5q"]
+[ext_resource type="Texture2D" uid="uid://b0lct7krcme12" path="res://assets/PlayingCards/individual_sprites/2_of_clubs.png" id="2_ivqog"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ivqog"]
+font_color = Color(0.31, 1, 0.6205, 1)
+
+[node name="CardVisual" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 120.0
+offset_bottom = 180.0
+script = ExtResource("1_ioh5q")
+
+[node name="Highlight" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 0, 0.392157)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 110.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.643137, 0.458824, 0.909804, 0.419608)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContentContainer" type="MarginContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/ContentContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="NinePatchRect/ContentContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "卡牌名称"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Artwork" type="TextureRect" parent="NinePatchRect/ContentContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_ivqog")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="DescriptionLabel" type="RichTextLabel" parent="NinePatchRect/ContentContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "这里是卡牌的效果描述文字..."
+fit_content = true
+autowrap_mode = 1
+
+[node name="ValueLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 23.0
+text = "99"
+label_settings = SubResource("LabelSettings_ivqog")
+vertical_alignment = 1
+
+[node name="ImmuneIcon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0

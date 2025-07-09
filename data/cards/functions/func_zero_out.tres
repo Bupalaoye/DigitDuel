@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://div2qurxn7vgr"]
+
+[ext_resource type="Texture2D" uid="uid://bs11w7a4762b8" path="res://assets/PlayingCards/individual_sprites/jack_of_clubs.png" id="1_0uu4a"]
+[ext_resource type="Script" uid="uid://d1q2pfofy8b30" path="res://data/definitions/CardData.gd" id="2_jqliw"]
+
+[resource]
+script = ExtResource("2_jqliw")
+type = 1
+common_id = "func_zero_out"
+common_name = "zero_out"
+common_description = "选择 对手 领地上的一张数字牌，其点数变为 0"
+common_artwork = ExtResource("1_0uu4a")
+effect = 1
+metadata/_custom_type_script = "uid://d1q2pfofy8b30"
