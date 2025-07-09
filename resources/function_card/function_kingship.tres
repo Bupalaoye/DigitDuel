@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://dfwjml7yhu4p"]
+
+[ext_resource type="Script" uid="uid://8jhsym5yuk3m" path="res://scripts/resource/CardData.gd" id="1_ex2ln"]
+
+[resource]
+script = ExtResource("1_ex2ln")
+card_name = "王权"
+card_type = 1
+description = "选择你领地上的一张数字牌，其点数翻倍。"
+base_value = 1
+function_id = "kingship"
+metadata/_custom_type_script = "uid://8jhsym5yuk3m"

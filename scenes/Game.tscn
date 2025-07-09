@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddielvfcigyyn"]
+
+[ext_resource type="Script" uid="uid://wfnylvh6vhl6" path="res://scripts/Game.gd" id="1_ibkli"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_ibkli")
+
+[node name="P1_Area" type="Node2D" parent="."]
+
+[node name="P1_Hand" type="HBoxContainer" parent="P1_Area"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="P1_Territory" type="HBoxContainer" parent="P1_Area"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="P1_Area/P1_Territory"]
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="P1_Area/P1_Territory"]
+layout_mode = 2
+
+[node name="Panel3" type="Panel" parent="P1_Area/P1_Territory"]
+layout_mode = 2
+
+[node name="P2_Area" type="Node2D" parent="."]
+
+[node name="P2_Hand" type="HBoxContainer" parent="P2_Area"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="P2_Territory" type="HBoxContainer" parent="P2_Area"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="P2_Area/P2_Territory"]
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="P2_Area/P2_Territory"]
+layout_mode = 2
+
+[node name="Panel3" type="Panel" parent="P2_Area/P2_Territory"]
+layout_mode = 2
+
+[node name="Common" type="Node2D" parent="."]
+
+[node name="DeckLabel" type="Label" parent="Common"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TurnIndicatorLabel" type="Label" parent="Common"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PassButton" type="Button" parent="Common"]
+offset_right = 8.0
+offset_bottom = 8.0
