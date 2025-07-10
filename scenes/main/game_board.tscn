@@ -1,8 +1,82 @@
-[gd_scene load_steps=2 format=3 uid="uid://dk6wsilvaql24"]
+[gd_scene load_steps=3 format=3 uid="uid://dk6wsilvaql24"]
 
-[ext_resource type="Script" uid="uid://d3x2x1tg01l8v" path="res://scenes/main/GameBoard.gd" id="1_a2kt3"]
+[ext_resource type="Script" uid="uid://d3x2x1tg01l8v" path="res://scripts/main/GameBoard.gd" id="1_a2kt3"]
+[ext_resource type="PackedScene" uid="uid://scx5f1gxuks8" path="res://scenes/components/TerritorySlot.tscn" id="2_wkwf4"]
 
-[node name="GameBoard" type="Node2D"]
+[node name="GameBoard" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_a2kt3")
 
-[node name="HandContainer" type="Node2D" parent="."]
+[node name="Player1Hand" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 207.0
+offset_top = 4.0
+offset_right = 247.0
+offset_bottom = 44.0
+theme_override_constants/separation = 10
+
+[node name="Player2Hand" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 229.0
+offset_top = 500.0
+offset_right = 269.0
+offset_bottom = 540.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="StartGameButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 467.0
+offset_top = 310.0
+offset_right = 475.0
+offset_bottom = 318.0
+text = "开始游戏"
+
+[node name="Player1Territory" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 366.0
+offset_top = 23.0
+offset_right = 746.0
+offset_bottom = 223.0
+theme_override_constants/separation = 10
+
+[node name="TerritorySlot" parent="Player1Territory" instance=ExtResource("2_wkwf4")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TerritorySlot2" parent="Player1Territory" instance=ExtResource("2_wkwf4")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TerritorySlot3" parent="Player1Territory" instance=ExtResource("2_wkwf4")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Player2Territory" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 360.0
+offset_top = 406.0
+offset_right = 740.0
+offset_bottom = 607.0
+theme_override_constants/separation = 10
+
+[node name="TerritorySlot" parent="Player2Territory" instance=ExtResource("2_wkwf4")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TerritorySlot2" parent="Player2Territory" instance=ExtResource("2_wkwf4")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TerritorySlot3" parent="Player2Territory" instance=ExtResource("2_wkwf4")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="mouse_entered" from="Player2Territory/TerritorySlot3" to="." method="_on_territory_slot_3_mouse_entered"]

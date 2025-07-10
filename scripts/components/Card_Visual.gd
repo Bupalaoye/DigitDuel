@@ -81,6 +81,7 @@ func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
 		# 发出信号，并把自己作为参数传递出去
 		print('clicked')
+		GameManager.on_hand_card_selected(runtime_data)
 
 func _on_mouse_entered() -> void:
 	print('_on_mouse_entered')

@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://scx5f1gxuks8"]
+
+[ext_resource type="Script" uid="uid://dxo0g5b68v1pc" path="res://scripts/components/TerritorySlot.gd" id="1_ya2iv"]
+
+[node name="TerritorySlot" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 120.0
+offset_bottom = 180.0
+mouse_filter = 1
+script = ExtResource("1_ya2iv")
+
+[node name="Placeholder" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0.0177324, 0.0177324, 0.0177324, 0.14902)
+
+[node name="CardContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
